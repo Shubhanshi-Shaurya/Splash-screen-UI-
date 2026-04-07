@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splash Screen</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            height: 100%;
+            width: 100%;
+            background: #f2f2f2;
+            font-family: monospace; 
+        }
+        .splash{
+            position: fixed;
+            inset: 0;
+            background: url(./assets/back2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            animation: hideSplash 5s ease forwards;
+            animation-delay: 2.5s;
+            z-index: 9999;
+        }
+        .icon-box{
+            height: 30vh;
+            width: 30vb;
+            border-radius: 12px;
+            background-color: #6f5837;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: pop 1.2s ease;
+        }
+        .icon-box span {
+        font-size: 150px;
+        font-weight: bolder;
+        color: white;
+       }
+        .title{
+            margin-top: 15px;
+            font-size: 50px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: #333;
+            animation: fadeIn 1.2s ease;
+        }
+        .sub-title{
+            margin-top: 15px;
+            font-size: 35px;
+            letter-spacing: 1px;
+            animation: come 1s ease;
+            font-family: cursive;
+        }
+        @keyframes hideSplash{
+            to {opacity: 0; visibility: hidden;}
+        }
+        @keyframes pop{
+            0% { transform: scale(0.4); opacity: 0; }
+            80% { transform: scale(1.1); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        @keyframes fadeIn{
+            from{opacity: 0;transform: translateY(10px);}
+            to{opacity: 1; transform: translateY(0);}
+        }
+        @keyframes come{
+            from{opacity: 0; transform: translateY(8px);}
+            to{opacity: 1;transform: translateY(0);}
+        }
+    </style>
+</head>
+<body>
+    <div class="splash">
+        <div class="icon-box"> 
+          <span>✓</span>
+        </div>
+        <div class="title">To - Do List</div>
+        <div class="sub-title">Write Your Tasks Here...</div>
+    </div>
+</body>
+</html>
