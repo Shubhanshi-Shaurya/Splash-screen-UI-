@@ -55,8 +55,3 @@ splash_screen
 
 ---
 
-
-## Author
-Shubhanshi Shaurya
-
----
